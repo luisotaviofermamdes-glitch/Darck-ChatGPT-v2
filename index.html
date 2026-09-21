@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="description" content="Darck ChatGPT V2 — interface de chat moderna e responsiva.">
+  <title>Darck ChatGPT V2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="logo">✦</div><div><strong>Darck</strong><span>ChatGPT V2</span></div></div>
+      <button class="new-chat" id="newChat">＋ Novo chat</button>
+      <div class="history-title">Conversas</div>
+      <div id="history" class="history"></div>
+      <div class="side-bottom">
+        <button class="side-btn" id="themeBtn">◐ <span>Tema</span></button>
+        <button class="side-btn" id="clearBtn">⌫ <span>Limpar conversas</span></button>
+        <div class="profile"><div class="avatar">D</div><div><b>Usuário</b><small>Local</small></div><span>•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" id="menuBtn">☰</button>
+        <div class="model-wrap">
+          <button class="model-btn" id="modelBtn"><span class="status-dot"></span><b id="modelName">Darck V2</b><span>⌄</span></button>
+          <div class="model-menu hidden" id="modelMenu">
+            <button data-model="Darck V2">✦ Darck V2 <small>Principal</small></button>
+            <button data-model="Local AI">◉ Local AI <small>Ollama / API</small></button>
+            <button data-model="Rápido">⚡ Rápido <small>Respostas leves</small></button>
+          </div>
+        </div>
+        <div class="top-actions"><button class="icon-btn" id="shareBtn" title="Compartilhar">↗</button><button class="icon-btn" id="moreBtn">•••</button></div>
+      </header>
+
+      <section class="chat" id="chat">
+        <div class="welcome" id="welcome">
+          <div class="welcome-logo">✦</div>
+          <h1>Como posso ajudar?</h1>
+          <p>Bem-vindo ao <b>Darck ChatGPT V2</b>. Escreva uma mensagem para começar.</p>
+          <div class="suggestions">
+            <button data-prompt="Explique inteligência artificial de forma simples.">💡 Explique IA de forma simples</button>
+            <button data-prompt="Crie um site HTML moderno para mim.">⌘ Crie um site HTML</button>
+            <button data-prompt="Ajude-me a aprender programação.">⚙ Ajude-me a programar</button>
+            <button data-prompt="Dê-me ideias para um projeto.">✦ Ideias para um projeto</button>
+          </div>
+        </div>
+        <div id="messages"></div>
+      </section>
+
+      <footer class="composer-area">
+        <div class="composer">
+          <button class="attach" id="attachBtn" title="Anexar">＋</button>
+          <textarea id="input" rows="1" placeholder="Mensagem para Darck..." aria-label="Mensagem"></textarea>
+          <button class="mic" id="micBtn" title="Voz">♩</button>
+          <button class="send" id="sendBtn" title="Enviar">↑</button>
+        </div>
+        <div class="footer-note">Darck ChatGPT V2 pode cometer erros. Verifique informações importantes.</div>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
