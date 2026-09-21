@@ -60,3 +60,11 @@ Ver log do motor:
 Android -> navegador -> FastAPI -> llama.cpp -> modelo GGUF
 
 Tudo é executado localmente depois que os arquivos/modelo já foram baixados.
+
+
+## Versão Web — Darck ChatGPT V2
+
+O repositório também contém uma interface web estática em `index.html`, `style.css` e `app.js`. Ela funciona diretamente no GitHub Pages e no celular. O chat salva o histórico no `localStorage` do navegador e usa respostas de demonstração até que uma API de IA real seja conectada.
+
+### GitHub Pages
+Em **Settings → Pages**, selecione **Deploy from a branch → main → /(root)**. Depois abra a página publicada pelo GitHub Pages.
