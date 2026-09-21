@@ -6,3 +6,5 @@ venv/
 data/chats.json
 *.log
 .DS_Store
+models/*.gguf
+llama.cpp/
